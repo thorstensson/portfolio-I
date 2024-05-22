@@ -1,0 +1,498 @@
+@import url("https://use.typekit.net/auz5xht.css");
+
+// ==========================================================================
+// Variables, all the below needs a tidy badly
+// ==========================================================================
+
+// My praystation color theme on coloors
+$alpha-color: #011627; // Site Background
+$beta-color: #fdfffc; // Main copy
+$gamma-color: #8bb7fa; // Menu and link hover states
+$delta-color: #654af8; // Titles, Three JS, Bird
+$epsilon-color: #1a2d3d; //Backgrounds for UI
+
+// Overrides of bulma colors
+$button-background-color: $gamma-color;
+$button-border-width: 0;
+$button-color: $beta-color;
+
+$navbar-background-color: $alpha-color;
+$navbar-item-hover-background-color: $alpha-color;
+$navbar-item-color: $beta-color;
+$navbar-item-hover-color: $gamma-color;
+$navbar-burger-color: $beta-color;
+
+$body-background-color: $alpha-color;
+$body-color: $beta-color;
+
+$box-color: $beta-color;
+$box-background-color: $epsilon-color;
+$box-radius: 0.75rem;
+
+$card-background-color: $epsilon-color;
+$card-color: $beta-color;
+
+// Override of bulma Font
+$body-family: "neue-haas-grotesk-text", sans-serif;
+
+// Additonal font (no override)
+$heading-family: "neue-haas-grotesk-text", sans-serif;
+
+$decor-family: input-mono, monospace;
+
+$ui-family: "darkmode-on", sans-serif;
+
+// Override of footer padding
+$footer-padding: 1rem 1.5rem 1rem;
+
+// ==========================================================================
+// Import Bulma, backdated version
+// ==========================================================================
+
+@import "~bulma/bulma.sass";
+
+// ==========================================================================
+// Fontprops
+// ==========================================================================
+
+.titletxt {
+  font-family: $heading-family;
+  font-weight: 700;
+  font-style: normal;
+  color: $beta-color;
+}
+
+.bodytxt {
+  font-family: $body-family;
+  font-weight: 500;
+  font-style: normal;
+  color: $beta-color;
+}
+
+.menutxt {
+  font-family: $ui-family;
+  font-weight: 700;
+  font-style: normal;
+  color: $beta-color;
+}
+
+.decortxt {
+  font-family: $decor-family;
+  font-weight: 700;
+  color: $delta-color;
+}
+
+figure img {
+  /* border-radius: 0.75rem; */
+  border-top-right-radius: 0.75rem;
+  border-top-left-radius: 0.76rem;
+}
+
+// ==========================================================================
+// Sweett modal fixes; will have to write my own modal.
+// ==========================================================================
+
+.sweet-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sweet-modal {
+  transform: none !important;
+  transition: none;
+  top: unset;
+  left: unset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sweet-modal .sweet-buttons,
+.sweet-modal .sweet-content {
+  transition: none;
+}
+
+.sweet-modal.is-alert .sweet-content {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.sweet-modal,
+.sweet-content,
+.sweet-content-content {
+  background-color: $epsilon-color;
+}
+
+.sweet-action-close {
+  transition: 0.3s !important;
+}
+
+.sweet-action-close:hover {
+  background: none !important;
+  color: $gamma-color !important;
+}
+
+.sweet-modal {
+  border: 3px solid $alpha-color;
+}
+
+// ==========================================================================
+// UI
+// ==========================================================================
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navbar-menu {
+  font-size: 18px;
+  @extend .menutxt;
+}
+
+.navbar-item {
+  text-align: right;
+  padding: 0.1rem 0.75rem !important;
+}
+
+.navbar-burger:hover {
+  color: $gamma-color;
+}
+
+.navbar-burger > span {
+  height: 3px;
+}
+
+body.has-navbar-fixed-top {
+  padding-top: 0;
+}
+
+/* Bulma burger goes fries */
+.navbar.is-fixed-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0 !important;
+}
+
+.navbar-burger span {
+  left: calc(50% - 11px);
+  width: 22px;
+}
+
+.navbar-burger span:nth-child(2) {
+  width: 16px;
+  margin-left: 5px;
+}
+
+.button {
+  font-family: $ui-family;
+}
+
+.button {
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: $alpha-color;
+}
+
+.box {
+  height: 100%;
+}
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  height: 100%;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.box-title {
+  margin-top: 1.5rem !important;
+}
+
+.card .title {
+  color: $beta-color;
+}
+
+.media-content a {
+  font-family: $ui-family;
+}
+
+.card-content {
+  padding: 0.75rem;
+}
+
+.form-mobile .box {
+  background-color: $epsilon-color;
+}
+
+.icon {
+  margin-left: 7px;
+}
+
+// ==========================================================================
+// Text props
+// ==========================================================================
+body {
+  @extend .bodytxt;
+}
+.markdown-body {
+  @extend .bodytxt;
+}
+
+.markdown-body h3,
+.markdown-body h3 a {
+  @extend .titletxt;
+}
+
+.markdown-body strong {
+  color: $beta-color;
+}
+
+.markdown-body h3 a,
+.markdown-body a,
+li a {
+  text-decoration: underline;
+}
+/*negative as markdown ads lots of white*/
+.markdown-body h3 {
+  margin-bottom: -20px;
+}
+
+.markdown-body h5 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @extend .titletxt;
+}
+
+.title {
+  @extend .titletxt;
+}
+
+.size-0 {
+  font-size: 3.5rem;
+}
+
+.intro {
+  @extend .bodytxt;
+  line-height: 1;
+}
+
+.name-title {
+  @extend .decortxt;
+  margin-top: 6px;
+}
+
+.active-link,
+.exact-active-link {
+  color: $gamma-color;
+}
+
+.vue-simple-markdown {
+  margin-bottom: 30px;
+}
+
+// ==========================================================================
+// Text Links
+// ==========================================================================
+a {
+  transition: 0.3s;
+  color: $beta-color;
+}
+
+a:hover {
+  color: $gamma-color;
+}
+
+// ==========================================================================
+// Footer props
+// ==========================================================================
+
+.footer {
+  @extend .menutxt;
+  background-color: $alpha-color;
+  color: $beta-color;
+}
+
+i.fas.fa-camera.fa-lg {
+  margin-bottom: 2px;
+}
+
+// ==========================================================================
+// Hero props
+// ==========================================================================
+.hero-home {
+  @extend .hero;
+}
+
+.has-navbar-fixed-top .hero.is-fullheight {
+  min-height: calc(var(--vh, 1vh) * 100 - #{$navbar-height} - 120px);
+}
+
+.is-below-hero {
+  padding: 1rem 1.5rem 3.5rem 1.5rem;
+}
+
+// ==========================================================================
+// Canvas
+// ==========================================================================
+canvas {
+  display: block;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// ==========================================================================
+// Queries
+// ==========================================================================
+
+@media screen and (min-width: 769px) {
+  .is-size-0-tablet {
+    font-size: 4rem !important;
+  }
+}
+
+//desk
+@media screen and (min-width: 1024px) {
+  .navbar-item.is-hoverable:hover .navbar-dropdown {
+    display: block !important;
+  }
+  .navbar-item.is-hoverable:focus-within .navbar-dropdown {
+    display: none;
+  }
+  .name-title {
+    margin-top: 2px;
+  }
+  .is-size-1-desktop {
+    font-size: 3.7rem !important;
+  }
+  .is-size-0-desktop {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-body {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .textarea:not([rows]) {
+    max-height: 400px;
+    min-height: 80px;
+  }
+
+  .form-mobile {
+    padding: 3rem 1.5rem;
+    padding-top: 0;
+  }
+
+  div .box:has(form) {
+    opacity: 0.9;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section.is-medium {
+    padding: 5rem 1.5rem;
+  }
+}
+
+.fa,
+.fas {
+  line-height: 20px;
+  vertical-align: bottom;
+}
+
+// ==========================================================================
+// Small adjustmeens to box in some nests
+// ==========================================================================
+.columns.is-multiline.is-centered {
+  text-align: center;
+}
+
+.label {
+  color: $beta-color;
+}
+
+// ==========================================================================
+// The Bird
+// ==========================================================================
+.frigate-svg {
+  z-index: -1;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  -webkit-animation: zoom-in-zoom-out 3s ease infinite;
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+@-webkit-keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+// ==========================================================================
+// Animate CSS config
+// ==========================================================================
+
+:root {
+  --animate-duration: 400ms;
+  --animate-delay: 0.9s;
+}
+
+li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+// ==========================================================================
+// Misc
+// ==========================================================================
+
+.column div:has(img) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
