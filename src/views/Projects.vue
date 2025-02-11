@@ -17,7 +17,7 @@
       <div class="container">
         <div class="columns is-left">
           <div class="column is-half is-size-5-desktop">
-            <p>Welcome yourself to an espresso and have a read. More to come.</p>
+            <p>Have a read.</p>
           </div>
         </div>
       </div>

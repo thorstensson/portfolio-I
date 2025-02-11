@@ -1,7 +1,6 @@
 <template>
   <div>
     <section class="hero">
-      <img src="../assets/frigate.svg" class="frigate-svg"></img>
       <div class="hero-body">
         <div class="container">
           <p class="title is-size-2-mobile is-size-1-tablet is-size-1-desktop">Say Hello</p>

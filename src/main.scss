@@ -5,18 +5,18 @@
 // ==========================================================================
 
 // My praystation color theme on coloors
-$alpha-color: #011627; // Site Background
-$beta-color: #fdfffc; // Main copy
-$gamma-color: #8bb7fa; // Menu and link hover states
-$delta-color: #654af8; // Titles, Three JS, Bird
-$epsilon-color: #1a2d3d; //Backgrounds for UI
+$alpha-color: #0F0F0f; // Site Background
+$beta-color: #FAF8FF; // Main copy
+$gamma-color: #23d160; // Menu and link hover states
+$delta-color: #8685ef; // Titles, Three JS, Bird
+$epsilon-color: #c9c9c9; //Backgrounds for UI
 
 // Overrides of bulma colors
 $button-background-color: $gamma-color;
 $button-border-width: 0;
 $button-color: $beta-color;
 
-$navbar-background-color: $alpha-color;
+$navbar-background-color: unset;
 $navbar-item-hover-background-color: $alpha-color;
 $navbar-item-color: $beta-color;
 $navbar-item-hover-color: $gamma-color;
@@ -33,14 +33,14 @@ $card-background-color: $epsilon-color;
 $card-color: $beta-color;
 
 // Override of bulma Font
-$body-family: "neue-haas-grotesk-text", sans-serif;
+$body-family: "Plus Jakarta Sans", sans-serif;
 
 // Additonal font (no override)
-$heading-family: "neue-haas-grotesk-text", sans-serif;
+$heading-family: "Plus Jakarta Sans", sans-serif;
 
-$decor-family: input-mono, monospace;
+$decor-family: "Lexend", sans-serif;;
 
-$ui-family: "darkmode-on", sans-serif;
+$ui-family: "Lexend", sans-serif;;
 
 // Override of footer padding
 $footer-padding: 1rem 1.5rem 1rem;
@@ -71,21 +71,33 @@ $footer-padding: 1rem 1.5rem 1rem;
 
 .menutxt {
   font-family: $ui-family;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   color: $beta-color;
 }
 
 .decortxt {
   font-family: $decor-family;
-  font-weight: 700;
-  color: $delta-color;
+  font-weight: 400;
+  color: $beta-color;
 }
 
 figure img {
   /* border-radius: 0.75rem; */
   border-top-right-radius: 0.75rem;
   border-top-left-radius: 0.76rem;
+}
+
+.select select, .textarea, .input {
+  background-color: #f2f2f2;
+  color: #000;
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.label {
+  color:#000;
 }
 
 // ==========================================================================
@@ -201,6 +213,7 @@ body.has-navbar-fixed-top {
 
 .box {
   height: 100%;
+  background-color:#141414
 }
 .card {
   height: 100%;
@@ -233,7 +246,7 @@ body.has-navbar-fixed-top {
 }
 
 .form-mobile .box {
-  background-color: $epsilon-color;
+  background-color: #141414;
 }
 
 .icon {

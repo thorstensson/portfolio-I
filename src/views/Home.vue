@@ -9,7 +9,8 @@
             Hi, I'm Thomas
           </p>
           <p class="intro is-size-2-mobile is-size-1-tablet is-size-1-desktop">
-            I write code<br>and craft pixels<br>out of Barcelona.<br>Also, coffee.
+            I write code<br>and craft pixels<br>out of Barcelona.<br><br>
+            Note: old portfolio!<br>New portfolio coming<br>(Nuxt/ThreeJS/GSAP)<br>@ thomasjt.com
           </p>
         </div>
       </div>

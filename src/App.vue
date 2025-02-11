@@ -6,8 +6,8 @@
       <nav class="navbar is-transparent is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <router-link class="" to="/">
-            <p class="navbar-item name-title epsilon-color is-size-5" href="#">
-              {T}
+            <p class="navbar-item name-title is-size-5" href="#">
+              &#10085;T
             </p>
           </router-link>
 
@@ -33,11 +33,12 @@
         leave-active-class="animate__animated animate__fadeOut">
         <router-view></router-view>
       </transition>
+      <FxNoise />
     </div>
 
     <footer class="footer" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
       <div class="content has-text-right">
-        <span class="is-size-7">Beta 1.1.0</span>
+        <span class="is-size-7">I am a really old portfolio; I now don't agree with the code, UI, or style, and I dont have loaders!</span>
         <span class="icon">
           <a href="https://linkedin.com/in/thomasthorstensson" target="_blank"><i
               class="fa-brands fa-linkedin fa-lg"></i></a>
@@ -51,9 +52,13 @@
 </template>
 
 <script>
+import FxNoise from "@/components/FxNoise";
 
 export default {
   name: "App",
+  components: {
+    FxNoise
+  },
   data() {
     return {
       showNav: false,

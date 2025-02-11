@@ -34,7 +34,7 @@ export default {
         antialias: true,
         alpha: true
       });
-      renderer.setClearColor(0x011627); //HERE
+      renderer.setClearColor(0x0F0F0f); //HERE
 
       (ww = window.innerWidth), (wh = window.innerHeight);
 
@@ -56,7 +56,7 @@ export default {
         var geometry = new THREE.Geometry();
         var material = new THREE.PointsMaterial({
           size: 3,
-          color: 0x654af8,
+          color: 0x383838,
           sizeAttenuation: false,
         });
         for (var y = 0, y2 = imagedata.height; y < y2; y += 2) {
